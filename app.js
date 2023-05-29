@@ -141,37 +141,48 @@
 
 // 4) Crea una función llamada "obtenerMaximo" que tome un arreglo de números como parámetro y devuelva el número máximo encontrado en el arreglo.
 
-function obtenerMaximo(arr) {
-    if (arr.length === 0) {
-        throw new Error("El arreglo está vacío.");
-    }
+// function obtenerMaximo(arr) {
+//     if (arr.length === 0) {
+//         throw new Error("El arreglo está vacío.");
+//     }
 
-    let maximo = arr[0];
+//     let maximo = arr[0];
 
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > maximo) {
-        maximo = arr[i];
-        }
-    }
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] > maximo) {
+//         maximo = arr[i];
+//         }
+//     }
 
-    return maximo;
+//     return maximo;
+// }
+
+//   // Ejemplo de uso:
+// let numeros = [5, 8, 3, 9, 2];
+// document.write("el número máximo es: " + obtenerMaximo(numeros));
+
+
+
+
+// Ejercicio de Objetos 
+
+
+
+// 1) Crea un objeto llamado "producto" con las propiedades "nombre", "precio" y "cantidad". Luego, escribe una función llamada "calcularTotal" que tome un objeto producto como parámetro y devuelva el total a pagar (precio * cantidad).
+
+
+let producto = {
+    nombre: "cargador para celular",
+    precio: 1500,
+    cantidad: 5
 }
 
-  // Ejemplo de uso:
-let numeros = [5, 8, 3, 9, 2];
-document.write("el número máximo es: " + obtenerMaximo(numeros));
 
+const calcularTotal = () => {
+    return producto.precio*producto.cantidad;
+}
 
-
-
-
-
-
-
-
-
-
-
+document.write(calcularTotal(producto))
 
 
 

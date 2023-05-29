@@ -55,10 +55,32 @@
 
 // 4) Crea una función llamada "generarNumeroAleatorio" que no tome parámetros y devuelva un número entero aleatorio entre 1 y 10.
 
-const generarNumeroAleatorio = (min,max) => {
-    return parseInt(Math.random() * (max - min)) + min + "<br>";
+// const generarNumeroAleatorio = (min,max) => {
+//     return parseInt(Math.random() * (max - min)) + min + "<br>";
+// }
+
+// for (let i = 0; i < 100; i++) {
+//     document.write(generarNumeroAleatorio(1,11))
+// }
+
+
+
+
+
+// Ejercicios de Arreglos
+
+
+// 1) Crea una función llamada "obtenerSuma" que reciba un arreglo de números como parámetro y devuelva la suma de todos los elementos del arreglo.
+
+function obtenerSuma(arreglo) {
+    let suma = 0;
+
+    for (let i = 0; i < arreglo.length; i++) {
+        suma += arreglo[i];
+    }
+
+    return suma;
 }
 
-for (let i = 0; i < 100; i++) {
-    document.write(generarNumeroAleatorio(1,11))
-}
+let numeros = [1,2,3,4,5];
+document.write(obtenerSuma(numeros));

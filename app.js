@@ -171,28 +171,37 @@
 // 1) Crea un objeto llamado "producto" con las propiedades "nombre", "precio" y "cantidad". Luego, escribe una función llamada "calcularTotal" que tome un objeto producto como parámetro y devuelva el total a pagar (precio * cantidad).
 
 
-let producto = {
-    nombre: "cargador para celular",
-    precio: 1500,
-    cantidad: 5
+// let producto = {
+//     nombre: "cargador para celular",
+//     precio: 1500,
+//     cantidad: 5
+// }
+
+
+// const calcularTotal = () => {
+//     return producto.precio*producto.cantidad;
+// }
+
+// document.write(calcularTotal(producto));
+
+
+
+// 2) Implementa un objeto llamado "persona" con las propiedades "nombre", "edad" y "profesion".A continuación, escribe una función llamada "presentarPersona" que tome un objeto persona como parámetro y muestre en la consola una presentación de la persona.
+
+
+let persona = {
+    nombre: "Brian",
+    edad: 18,
+    profesion: "estudiante"
 }
 
 
-const calcularTotal = () => {
-    return producto.precio*producto.cantidad;
+const presentarPersona = () => {
+    return `Hola, soy ${persona.nombre} y tengo ${persona.edad}, actualmete soy ${persona.profesion}`
 }
 
-document.write(calcularTotal(producto))
 
-
-
-
-
-
-
-
-
-
+document.write(presentarPersona(persona))
 
 
 

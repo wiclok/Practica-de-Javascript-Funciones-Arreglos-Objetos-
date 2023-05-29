@@ -240,27 +240,111 @@
 
 // 1) Crear un programa que pida al usuario que ingrese un número y le devuelva un mensaje indicando si el número es positivo, negativo o si es 0.
 
-const positivoNegativo = (num) => {
-    if (num > 0) {
-        return "El número es postivo"
+// const positivoNegativo = (num) => {
+//     if (num > 0) {
+//         return "El número es postivo";
+//     }
+//     if (num < 0) {
+//         return "El número es negativo";
+//     }
+//     if (num == 0) {
+//         return "El número es el cero";
+//     }
+// }
+
+// let numero = prompt("ingrese un número");
+
+// document.write(positivoNegativo(numero));
+
+
+// 2) Crear un programa que pida un numero al usuario y le devuelva un mensaje diciendo si el número es primo o no.
+
+// let numero = prompt("Ingrese un número:");
+
+
+// let esPrimo = true;
+
+// if (numero <= 1) {
+//     esPrimo = false;
+// } else {
+//     for (let i = 2; i <= Math.sqrt(numero); i++) {
+//     if (numero % i === 0) {
+//         esPrimo = false;
+//         break;
+//     }
+//     }
+// }
+
+// // Mostrar el resultado
+// if (esPrimo) {
+//     document.write("El número " + numero + " es primo.");
+// } else {
+//     document.write("El número " + numero + " no es primo.");
+// }
+
+
+
+// 3) Crear un programa que convierta la temperatura de grados Celsius a Faranheit y viceversa. El usuario debería ingresar la temperatura y a que unidad la quiere convertir.
+
+
+// let temperatura = prompt("Ingrese la temperatura:");
+// let unidad = prompt("Ingrese la unidad de temperatura ('C' para Celsius o 'F' para Fahrenheit):");
+
+// // Función para convertir de Celsius a Fahrenheit
+// function celsiusAFahrenheit(celsius) {
+//   return (celsius * 9/5) + 32;
+// }
+
+// // Función para convertir de Fahrenheit a Celsius
+// function fahrenheitACelsius(fahrenheit) {
+//   return (fahrenheit - 32) * 5/9;
+// }
+
+// // Convertir la temperatura según la elección del usuario
+// let temperaturaConvertida;
+// let unidadConvertida;
+
+// if (unidad.toUpperCase() === 'C') {
+//     temperaturaConvertida = celsiusAFahrenheit(parseFloat(temperatura));
+//     unidadConvertida = 'Fahrenheit';
+// } else if (unidad.toUpperCase() === 'F') {
+//     temperaturaConvertida = fahrenheitACelsius(parseFloat(temperatura));
+//     unidadConvertida = 'Celsius';
+// }
+
+// // Mostrar el resultado
+// document.write(("La temperatura convertida es: " + temperaturaConvertida + " " + unidadConvertida));
+
+
+
+
+// 4) Crear un programa para calcular el total de una compra. Para ello se tiene que pedir al usuario que ingrese el precio de cada producto y cuando se le pide que ingrese la palabra "total" devolverle el total de la compra.
+
+// Variables para almacenar los precios y el total de la compra
+let precios = [];
+let total = 0;
+
+// Ciclo para solicitar los precios de los productos
+while (true) {
+    let precio = prompt("Ingrese el precio del producto (o escriba 'total' para obtener el total):");
+
+    if (precio.toLowerCase() === 'total') {
+        break;
     }
-    if (num < 0) {
-        return "El número es negativo"
-    }
-    if (num == 0) {
-        return "El número es el cero"
+
+    precio = parseFloat(precio);
+
+        // Verificar que el precio sea un número válido
+    if (!isNaN(precio) && precio >= 0) {
+    precios.push(precio);
+    total += precio;
+    } else {
+    document.write("Precio inválido. Intente nuevamente.");
     }
 }
 
-let numero = prompt("ingrese un número")
-
-document.write(positivoNegativo(numero))
-
-
-
-
-
-
+// Mostrar el total de la compra
+document.write("El total de la compra es: $" + total.toFixed(2));
 
 
 

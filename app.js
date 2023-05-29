@@ -72,15 +72,40 @@
 
 // 1) Crea una función llamada "obtenerSuma" que reciba un arreglo de números como parámetro y devuelva la suma de todos los elementos del arreglo.
 
-function obtenerSuma(arreglo) {
-    let suma = 0;
+// const obtenerSuma = (arreglo) =>{
+//     let suma = 0;
 
-    for (let i = 0; i < arreglo.length; i++) {
-        suma += arreglo[i];
+//     for (let i = 0; i < arreglo.length; i++) {
+//         suma += arreglo[i];
+//     }
+
+//     return suma;
+// }
+
+// let numeros = [1,2,3,4,5];
+// document.write(obtenerSuma(numeros));
+
+
+
+
+
+// 2) Implementa una función llamada "obtenerPares" que tome un arreglo de números como parámetro y devuelva un nuevo arreglo con solo los números pares del arreglo original.
+
+
+
+
+const obtenerPares = (Array) => {
+    const pares = [];
+
+    for (let i = 0; i < Array.length; i++) {
+        if (Array[i] % 2 === 0) {
+            pares.push(Array[i]);
+        }
     }
-
-    return suma;
+    return pares;
 }
 
-let numeros = [1,2,3,4,5];
-document.write(obtenerSuma(numeros));
+
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+document.write(obtenerPares(numeros));

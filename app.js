@@ -189,30 +189,49 @@
 // 2) Implementa un objeto llamado "persona" con las propiedades "nombre", "edad" y "profesion".A continuación, escribe una función llamada "presentarPersona" que tome un objeto persona como parámetro y muestre en la consola una presentación de la persona.
 
 
-let persona = {
+// let persona = {
+//     nombre: "Brian",
+//     edad: 18,
+//     profesion: "estudiante"
+// }
+
+
+// const presentarPersona = () => {
+//     return `Hola, soy ${persona.nombre} y tengo ${persona.edad}, actualmete soy ${persona.profesion}`
+// }
+
+
+// document.write(presentarPersona(persona))
+
+
+
+// 3) Crea una función llamada "esMayorEdad" que reciba un objeto persona como parámetro y devuelva true si la persona es mayor de edad (edad mayor o igual a 18), y false en caso contrario.
+
+
+
+const esMayorEdad = (persona) => {
+    if (persona >= 18) {
+        return true;
+    }
+    if (persona < 18) {
+        return false;
+    }
+}
+
+let persona1 = {
     nombre: "Brian",
     edad: 18,
     profesion: "estudiante"
 }
 
-
-const presentarPersona = () => {
-    return `Hola, soy ${persona.nombre} y tengo ${persona.edad}, actualmete soy ${persona.profesion}`
+let persona2 = {
+    nombre: "Juan",
+    edad: 12,
+    profesion: "estudiante"
 }
 
-
-document.write(presentarPersona(persona))
-
-
-
-
-
-
-
-
-
-
-
+document.write(esMayorEdad(persona1.edad) + "<br>")
+document.write(esMayorEdad(persona2.edad))
 
 
 

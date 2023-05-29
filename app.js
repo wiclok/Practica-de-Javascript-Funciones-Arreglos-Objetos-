@@ -40,12 +40,25 @@
 // 3) Implementa una función llamada "esPalindromo" que reciba una cadena como parámetro y devuelva true si la cadena es un palíndromo (se lee igual de izquierda a derecha y de derecha a izquierda), y false en caso contrario. Por ejemplo, para la cadena "radar" la función debería devolver true.
 
 
-const esPalindromo = (cadena) =>{
-    let array = cadena.split("");
-    let reverse = array.reverse();
+// const esPalindromo = (cadena) =>{
+//     let array = cadena.split("");
+//     let reverse = array.reverse();
 
-    return cadena == reverse.join("") ? "Si es" : "No es";
+//     return cadena == reverse.join("") ? "Si es" : "No es";
+// }
+
+
+// document.write(esPalindromo("radar"));
+
+
+
+
+// 4) Crea una función llamada "generarNumeroAleatorio" que no tome parámetros y devuelva un número entero aleatorio entre 1 y 10.
+
+const generarNumeroAleatorio = (min,max) => {
+    return parseInt(Math.random() * (max - min)) + min + "<br>";
 }
 
-
-document.write(esPalindromo("radar"));
+for (let i = 0; i < 100; i++) {
+    document.write(generarNumeroAleatorio(1,11))
+}

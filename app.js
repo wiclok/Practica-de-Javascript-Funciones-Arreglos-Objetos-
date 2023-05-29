@@ -114,25 +114,112 @@
 
 // 3) Escribe una función llamada "obtenerPromedioPonderado" que reciba dos arreglos: uno con las notas de los estudiantes y otro con los pesos correspondientes. La función debe calcular y devolver el promedio ponderado de las notas.
 
-function obtenerPromedioPonderado(notas, pesos) {
-    if (notas.length !== pesos.length) {
-        throw new Error("Los arreglos deben tener la misma longitud.");
+// const obtenerPromedioPonderado = (notas, pesos) =>{
+//     if (notas.length !== pesos.length) {
+//         throw new Error("Los arreglos deben tener la misma longitud.");
+//     }
+
+//     let sumaNotasPesos = 0;
+//     let sumaPesos = 0;
+
+//     for (let i = 0; i < notas.length; i++) {
+//         sumaNotasPesos += notas[i] * pesos[i];
+//         sumaPesos += pesos[i];
+//     }
+//     let promedioPonderado = sumaNotasPesos / sumaPesos;
+
+//     return promedioPonderado.toFixed(2);
+// }
+
+//   //Ejemplo de uso:
+// let notas = [8, 7, 9];
+// let pesos = [0.3, 0.4, 0.3];
+// let promedio = obtenerPromedioPonderado(notas, pesos);
+// document.write("El promedio ponderado es: " + promedio);
+
+
+
+// 4) Crea una función llamada "obtenerMaximo" que tome un arreglo de números como parámetro y devuelva el número máximo encontrado en el arreglo.
+
+function obtenerMaximo(arr) {
+    if (arr.length === 0) {
+        throw new Error("El arreglo está vacío.");
     }
 
-    let sumaNotasPesos = 0;
-    let sumaPesos = 0;
+    let maximo = arr[0];
 
-    for (let i = 0; i < notas.length; i++) {
-        sumaNotasPesos += notas[i] * pesos[i];
-        sumaPesos += pesos[i];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > maximo) {
+        maximo = arr[i];
+        }
     }
-    let promedioPonderado = sumaNotasPesos / sumaPesos;
 
-    return promedioPonderado.toFixed(2);
+    return maximo;
 }
 
   // Ejemplo de uso:
-let notas = [8, 7, 9];
-let pesos = [0.3, 0.4, 0.3];
-let promedio = obtenerPromedioPonderado(notas, pesos);
-document.write("El promedio ponderado es: " + promedio);
+let numeros = [5, 8, 3, 9, 2];
+document.write("el número máximo es: " + obtenerMaximo(numeros));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

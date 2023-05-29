@@ -209,34 +209,52 @@
 
 
 
-const esMayorEdad = (persona) => {
-    if (persona >= 18) {
-        return true;
+// const esMayorEdad = (persona) => {
+//     if (persona >= 18) {
+//         return true;
+//     }
+//     if (persona < 18) {
+//         return false;
+//     }
+// }
+
+// let persona1 = {
+//     nombre: "Brian",
+//     edad: 18,
+//     profesion: "estudiante"
+// }
+
+// let persona2 = {
+//     nombre: "Juan",
+//     edad: 12,
+//     profesion: "estudiante"
+// }
+
+// document.write(esMayorEdad(persona1.edad) + "<br>")
+// document.write(esMayorEdad(persona2.edad))
+
+
+
+
+// Resolver los siguientes ejercicios utilizando Funciones, Arreglos y Objetos (Si es necesario)
+
+// 1) Crear un programa que pida al usuario que ingrese un número y le devuelva un mensaje indicando si el número es positivo, negativo o si es 0.
+
+const positivoNegativo = (num) => {
+    if (num > 0) {
+        return "El número es postivo"
     }
-    if (persona < 18) {
-        return false;
+    if (num < 0) {
+        return "El número es negativo"
+    }
+    if (num == 0) {
+        return "El número es el cero"
     }
 }
 
-let persona1 = {
-    nombre: "Brian",
-    edad: 18,
-    profesion: "estudiante"
-}
+let numero = prompt("ingrese un número")
 
-let persona2 = {
-    nombre: "Juan",
-    edad: 12,
-    profesion: "estudiante"
-}
-
-document.write(esMayorEdad(persona1.edad) + "<br>")
-document.write(esMayorEdad(persona2.edad))
-
-
-
-
-
+document.write(positivoNegativo(numero))
 
 
 
